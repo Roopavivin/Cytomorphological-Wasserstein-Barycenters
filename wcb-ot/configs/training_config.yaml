@@ -1,0 +1,12 @@
+training:
+  batch_size: 32
+  lr: 1.0e-4
+  weight_decay: 1.0e-5
+  epochs: 100
+  patience: 15
+  num_workers: 4
+  optimizer: adam
+  scheduler: cosine
+  eval_metric: f1_macro
+  experiment_name: wcb_ot_classification
+  seeds: [42, 123, 456, 789, 101]

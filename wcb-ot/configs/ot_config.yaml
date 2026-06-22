@@ -1,0 +1,27 @@
+sinkhorn:
+  epsilon: 0.05
+  max_iter: 1000
+  tol: 1.0e-6
+  log_domain: true
+  numerical_conditioning: 1.0e-8
+barycenter:
+  k_subset: 5
+  n_synthetic: 1600
+  max_inner_iter: 50
+  convergence_tol: 1.0e-4
+  use_entropic_speedup: true
+cyto_cost:
+  alpha: 0.45   # nuclear weight
+  beta: 0.35    # chromatin weight
+  gamma: 0.20   # membrane weight
+  delta: 0.0    # spatial (N/A for SIPaKMeD)
+  meta_optimize_weights: true
+dynamical:
+  time_steps: [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+  interpolation_points: [0.3, 0.6]
+feature_pipeline:
+  morphological_dim: 42
+  texture_dim: 64
+  deep_dim: 512
+  pca_target_dim: 128
+  pca_variance_threshold: 0.95

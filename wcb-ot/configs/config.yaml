@@ -1,0 +1,19 @@
+project:
+  name: wcb-ot
+  seed: 42
+  device: cuda  # falls back to cpu if unavailable
+paths:
+  raw_data: data/raw/sipakmed
+  processed_data: data/processed
+  features: data/features
+  splits: data/splits
+  results: results
+  logs: results/logs
+  figures: results/figures
+dataset:
+  name: SIPaKMeD
+  image_size: 256
+  classes: ["Superficial_Intermediate", "Parabasal", "Koilocytotic", "Dyskeratotic", "Metaplastic"]
+  common_classes: ["Superficial_Intermediate", "Parabasal"]
+  rare_classes: ["Dyskeratotic", "Metaplastic"]
+  split_ratios: {train: 0.70, val: 0.15, test: 0.15}
